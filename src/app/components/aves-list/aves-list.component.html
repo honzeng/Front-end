@@ -1,0 +1,17 @@
+<div class="col-md-4" *ngFor="let ave of aves">
+    <div class="card text-center">
+        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+            {{ave.cdave}}
+            <button class="btn btn-danger" (click)="borrarAve(ave.cdave)">
+        <i class="far fa-trash-alt"></i>
+      </button>
+        </div>
+        <div class="card-body">
+            <p>{{ave.dsnombre_comun}}</p>
+            <p>{{ave.dsnombre_cientifico}}</p>
+            <a [routerLink]="['/listarAves/editar', ave.cdave]" class="btn btn-info btn-block">
+        Editar Ave
+      </a>
+        </div>
+    </div>
+</div>
